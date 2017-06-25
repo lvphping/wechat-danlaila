@@ -1,0 +1,68 @@
+@charset "utf-8";
+/****** 系统核心样式 ******/
+body,dl,dd,h1,h2,h3,h4,h5,h6,p,form,ul,ol,blockquote,input,textarea,select{margin:0;padding:0px;outline:none}
+label{height:24px; line-height:24px; cursor:pointer}
+
+/**
+ *文件上传样式
+ */
+.upload_div{margin:8px 0px}
+.form_file{position:relative;}
+.form_file .file_path{width:220px; height:28px; line-height:28px; overflow:hidden; cursor:not-allowed; border:#EBEBEB 1px solid; float:left; border-right:0px}
+.form_file .file_btn{background:#44b549; width:70px; height:30px;line-height:30px; text-align:center; color:#fff; display:block; float:left; z-index:1; font-size:13px}
+.form_file .file{filter:alpha(opacity=0); opacity:0;position:absolute;  cursor:pointer; left:-70px; text-indent:-9999px;  width:66px; height:30px; line-height:30px; outline:none}
+.form_file_img_demo{border:#F5F5F5 3px solid; max-width:220px; border-radius:3px; background:#F6F6F6}
+
+/**
+ *普通表单样式
+ */
+.common-text{height: 23px;line-height: 23px;padding: 2px 4px;border: 1px solid #EBEBEB;background: #fff; outline:none;hide-focus: expression(this.hideFocus=true);font-family:'Microsoft YaHei'}
+.common-textarea{padding: 4px;border: 1px solid #EBEBEB;background: #fff;resize:none; margin:8px 0px; outline:none;hide-focus: expression(this.hideFocus=true); font-family:'Microsoft YaHei'}
+.common-checkbox,.common-radio{-webkit-appearance: none;cursor:pointer; -webkit-appearance: none;    height: 14px; width: 14px; background: #fff;     margin-bottom: 3px;border: #d3cfc8 solid 1px;border-radius: 50%; vertical-align:middle; margin-right:4px; outline:none;border:0px \9; margin-bottom:0px \9;}
+.common-checkbox:checked,.common-radio:checked{background:url(images/radio-checked.jpg) no-repeat; background-size: 100% 100%; border:0px; border-radius:0 \9;background:none\9;}
+.common_btn{background:#44b549; padding:2px 4px; font-size:12px; text-align:center; color:#fff;cursor:pointer;font:  'Microsoft YaHei'; border:0px}
+
+select{overflow: auto;background:url(https://res.wx.qq.com/mmocbiz/zh_CN/tmt/devcenter/dist/img/debug-tool-select-bg_ff02f63b.png) repeat-x;z-index: 1;border: 1px solid #EBEBEB; max-height:250px;}
+
+/**
+ *地图表单样式
+ */
+.map_value {width: 330px;padding:0px;margin:0px;height: 28px;line-height: 28px;overflow: hidden;cursor: not-allowed;border: #EBEBEB 1px solid;float: left;border-right: 0px;}
+.map_btn{background:#44b549; width:70px; height:30px;line-height:28px; text-align:center; color:#fff; display:block; float:left; cursor:pointer; z-index:1;font: 14px/1.5 'Microsoft YaHei';; border:0px}
+.baidu_map{width:800px; height:480px;clear:both;border-radius:5px}
+
+/**
+ *视频表单样式
+ */
+.video-div{width:580px; height:170px; line-height:24px; clear:both; margin:8px 0px;border: #EBEBEB 1px solid; border-radius:3px;padding:8px 16px; position:relative; overflow:hidden}
+.video_file{cursor:pointer;filter:alpha(opacity=0); opacity:0;position:absolute;width:180px;}
+.video_value {width: 540px;padding:0px;margin:8px 0px;height: 28px;line-height: 28px;overflow: hidden;border: #EBEBEB 1px solid;}
+.video_btn{background:#44b549; width:70px; height:30px;line-height:28px; text-align:center; z-index:1; color:#fff; display:block; cursor:pointer; z-index:1;font: 14px/1.5 'Microsoft YaHei';; border:0px}
+.video_upload_btn {width:160px;background:#44b549; padding: 5px 10px; border-radius:3px; text-align:center; color:#fff; display:block; margin:8px 0px; clear:both; cursor:pointer; z-index:1;font: 14px/1.5 'Microsoft YaHei';; border:0px}
+.video_upload_btn_loading{width:160px;background:#CCC; padding: 5px 10px; border-radius:3px; text-align:center; color:#fff; display:block; margin:8px 0px; clear:both; cursor:not-allowed; z-index:1;font: 14px/1.5 'Microsoft YaHei';; border:0px}
+
+/**
+ *附件表单样式
+ */
+.attachment-div{width:580px; height:170px; line-height:24px; clear:both; margin:8px 0px;border: #EBEBEB 1px solid; border-radius:3px;padding:8px 16px; position:relative; overflow:hidden}
+.attachment_file{cursor:pointer;filter:alpha(opacity=0); opacity:0;position:absolute;width:180px;}
+.attachment_value {width: 540px;padding:0px;margin:8px 0px;height: 28px;line-height: 28px;overflow: hidden;border: #EBEBEB 1px solid;}
+.attachment_btn{background:#44b549; width:70px; height:30px;line-height:28px; text-align:center; z-index:1; color:#fff; display:block; cursor:pointer; z-index:1;font: 14px/1.5 'Microsoft YaHei';; border:0px}
+.attachment_upload_btn {width:160px;background:#44b549; padding: 5px 10px; border-radius:3px; text-align:center; color:#fff; display:block; margin:8px 0px; clear:both; cursor:pointer; z-index:1;font: 14px/1.5 'Microsoft YaHei';; border:0px}
+.attachment_upload_btn_loading{width:160px;background:#CCC; padding: 5px 10px; border-radius:3px; text-align:center; color:#fff; display:block; margin:8px 0px; clear:both; cursor:not-allowed; z-index:1;font: 14px/1.5 'Microsoft YaHei';; border:0px}
+
+/**
+ *安全证书表单样式
+ */
+.formfile-div{width:580px; height:auto; line-height:24px; clear:both; margin:8px 0px;border: #EBEBEB 1px solid; border-radius:3px;padding:8px 16px; position:relative; overflow:hidden}
+.formfile_file{cursor:pointer;filter:alpha(opacity=0); opacity:0;position:absolute;width:180px;}
+.formfile_upload_btn {width:160px;background:#44b549; padding: 5px 10px; border-radius:3px; text-align:center; color:#fff; display:block; margin:8px 0px; clear:both; cursor:pointer; z-index:1;font: 14px/1.5 'Microsoft YaHei';; border:0px}
+
+/**
+ *版权信息
+ */
+.dedechat-copyright{font-size:12px; color:#999999; text-align:center; margin:8px auto ; padding:0px}
+.dedechat-copyright a{color:#999999;}
+.dedechat-copyright a:hover{text-decoration:underline}
+
+.nodata{margin:10px auto; clear:both;text-align:center;font-size:14px;font-weight:400;color:darkgray}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>待支付页</title>
+    <link rel="stylesheet" href="{__TLP__}css/weui.css"/>
+    <style type="text/css">
+    	
+    </style>
+    <script type="text/javascript" src="{__TLP__}js/jquery-1.7.2.min.js"></script>
+    <script language="javascript" type="text/javascript">
+        var PW_PATH='{__PW_PATH__}';
+    </script>
+    <script src="{__PW_PATH__}statics/core.js" language="javascript"></script>
+    <script language="javascript" type="text/javascript">
+    //以下代码是微信支付的必须代码
+        function jsApiCall()
+        {
+            WeixinJSBridge.invoke(
+                'getBrandWCPayRequest',
+                {$paypara['jsApiParameters']},
+                function(res){
+                    WeixinJSBridge.log(res.err_msg);
+                    if(res.err_msg == "get_brand_wcpay_request:ok")
+                    {
+                        //定义支付成功后的跳转页面
+
+                        window.location.href="{format_url(U(MOD,'ordershow',array('out_trade_no'=>$order['out_trade_no'])))}";
+                    }
+                    else
+                    {
+                        //showToast()是phpWeChat自带的 JS 函数 代替alert()
+                        showToast('支付失败('+res.err_msg+')，请重新支付！',false);
+                    }
+                }
+            );
+        }
+    
+        function callpay()
+        {
+            if (typeof WeixinJSBridge == "undefined"){
+                if( document.addEventListener ){
+                    document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+                }else if (document.attachEvent){
+                    document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+                    document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+                }
+            }else{
+                jsApiCall();
+            }
+        }
+
+        //以上代码是微信支付的必须代码
+    </script>
+</head>
+<body ontouchstart>
+	<div class="weui_msg">
+        <div class="weui_icon_area"><i class="weui_icon_msg weui_icon_info"></i></div>
+        <div class="weui_text_area">
+            <h2 class="weui_msg_title">待支付订单已生成</h2>
+            <p class="weui_msg_desc">订单号：{$order['out_trade_no']}</p>
+        </div>
+        <div class="weui_opr_area">
+            <p class="weui_btn_area">
+                <a href="#" onclick="callpay()" class="weui_btn weui_btn_warn">微信支付</a>
+            </p>
+        </div>
+        <div class="weui_extra_area">
+            <a href="{U(MOD,'index')}">返回首页</a>
+        </div>
+    </div>
+</body>
+</html>

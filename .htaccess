@@ -1,0 +1,6 @@
+RewriteEngine On
+
+#RewriteCond %{http_host} ^phpwechat.com [NC]
+#RewriteRule ^(.*)$ http://www.phpwechat.com/$1 [L,R=301]
+
+#RewriteRule ^(.*?)([a-z0-9_]+)/([a-z0-9_]+)([\/]{0,1})$ /index.php?m=$2&a=$3

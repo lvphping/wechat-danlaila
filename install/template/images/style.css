@@ -1,0 +1,47 @@
+/*----------Reset CSS for Website----------*/
+
+body,ul,ol,li,form,img,div{outline:0; margin:0; padding:0; list-style:none; border:0; color:#000000}
+body{background:url(body.png) 0 12px repeat-x #EDF5FA; font:12px/1.5 Arial,Simsun}
+a{color:#066;}
+a:hover{color:#F60;}
+a:active{blr:expression(this.onFocus=this.blur())}
+a:focus {outline:none;-moz-outline:none;}
+input,select{font-size:12px;}
+
+/*In Common Usen*/
+.header{height:12px; background:url(bg-navigation.png); font-size:1px;}
+.main{width:900px; margin:0 auto; overflow:hidden;}
+.main .sidebar{float:left; width:230px; overflow:hidden;}
+.main .sidebar .logo{background:url(logo.png) 5px 40px no-repeat; height:150px; cursor:pointer}
+.main .sidebar .logo a{display:block; width:245px; height:145px}
+.main .sidebar .step{}
+.main .sidebar .step ul{clear:both; overflow:hidden;}
+.main .sidebar .step ul li{float:left; height:30px; line-height:30px;}
+.main .sidebar .step ul .statusdot{width:30px;}
+.main .sidebar .step ul .name{color:#333;}
+.main .sidebar .step .done .statusdot{background:url(mark-ok.png) 10px 6px no-repeat;}
+.main .sidebar .step .done .name{color:#093;}
+.main .sidebar .step .current .statusdot{background:url(statusdot.png) 12px 11px no-repeat;}
+.main .sidebar .step .current .name{font-weight:bold; color:#000;}
+.main .main{float:left; width:670px; padding:50px 0 0 0;}
+.main .main .bg_left{background:url(bg-content-left.png) 0 0 no-repeat;}
+.main .main .bg_center{background:url(bg-content.png) 0 0 repeat-x;}
+.main .main .bg_right{background:url(bg-content-right.png) right 0 no-repeat; padding:42px 10px 10px 10px;}
+.main .main .content{background:url(bg-content.png) 0 -42px repeat-x #FFF; border-bottom:1px #DDD solid; padding:6px 15px; min-height:400px; _height:400px; color:#000000}
+.btn{background:url(btn.png) no-repeat; width:100px; height:30px; line-height:30px; font-size:14px; font-weight:bold; color:#000; display:block; border:0px; cursor:pointer; margin:0px 4px;}
+.btn:hover{background-position:0 -30px;}
+.foot{width:960px; margin:20px auto; clear:both; color:#999; text-align:center; padding-bottom:30px}
+.version{ clear:both; color:#fff;text-align:right;height:30px; line-height:30px; padding:0px; margin:0px; padding-right:8px; }
+
+/* 最终用户使用授权许可协议 */
+.agre_title{font-size:15px; text-align:center; font-weight:bold; height:50px; line-height:50px;}
+.agre_content{font-size:12px; font-family:"Microsoft YaHei","\5b8b\4f53"; line-height:22px; border:1px #DDD solid; padding:10px; overflow:scroll; height:450px; overflow-x:hidden;}
+
+.input{outline:0; font-size:12px; border:1px #CCC solid; padding:2px 3px; height:17px; line-height:17px;}
+.input:hover{border:#58B4EC 1px solid}
+
+/* 信息显示 */
+#notice{padding:10px 20px; height:400px; overflow:scroll; overflow-x:hidden; margin:20px 0 0 0; border:1px #DDD solid;}
+#notice ol{height:24px; line-height:24px; color:#093;}
+
+.endclass{padding:30px 0 0 120px; line-height:30px;}
